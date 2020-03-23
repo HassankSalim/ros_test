@@ -4,11 +4,16 @@ import rospy
 import time
 from uuid import uuid4
 from std_msgs.msg import String
+import os
+
+open('/test.txt', 'a').close()
 
 import threading
 
 def callback(data):
     s = rospy.get_caller_id() + " I'm talker and I heard  {}".format(data.data)
+    with('/test.txt') as f:
+        f.write(s)
     rospy.loginfo(s)
 
 def talker():
