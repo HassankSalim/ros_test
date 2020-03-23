@@ -6,13 +6,13 @@ from uuid import uuid4
 from std_msgs.msg import String
 import os
 
-open('/home/ndakota/temp_ws/src/kompose_manager/src/test.txt', 'a').close()
+open('/test.txt', 'a').close()
 
 import threading
 
 def callback(data):
     s = rospy.get_caller_id() + " I'm talker and I heard  {}".format(data.data)
-    with open('/home/ndakota/temp_ws/src/kompose_manager/src/test.txt', 'w') as f:
+    with open('/test.txt', 'w') as f:
         f.write(s)
     rospy.loginfo(s)
 
