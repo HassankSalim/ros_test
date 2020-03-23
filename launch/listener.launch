@@ -1,0 +1,3 @@
+<launch>
+	<node name="listener" pkg="kompose_manager" type="listener.py" output="screen"/>
+</launch>
