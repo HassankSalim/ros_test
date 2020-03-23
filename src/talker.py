@@ -12,7 +12,7 @@ import threading
 
 def callback(data):
     s = rospy.get_caller_id() + " I'm talker and I heard  {}".format(data.data)
-    with('/test.txt') as f:
+    with('/test.txt', 'w') as f:
         f.write(s)
     rospy.loginfo(s)
 
