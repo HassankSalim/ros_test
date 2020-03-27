@@ -1,0 +1,3 @@
+<launch>
+	<node name="server" pkg="kompose_manager" type="server.py" output="screen"/>
+</launch>
