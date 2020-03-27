@@ -10,9 +10,9 @@ from kompose_manager.srv import Uuid, UuidResponse
 from datetime import datetime
 
 def server(req):
-    print('Got call doing work... with {}'.format(s))
-    s = 'data: {}'.format(req.uuid)
-    with open(os.getcwd()+'/test.txt', 'w+') as f:
+    print('Got call doing work on device side ... with {}'.format(s))
+    s = 'device data: {}'.format(req.uuid)
+    with open('/test.txt', 'w+') as f:
         f.write(s)
     rospy.loginfo(s)
     return UuidResponse()

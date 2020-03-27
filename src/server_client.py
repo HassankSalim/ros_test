@@ -12,10 +12,10 @@ import threading
 
 def server(req):
     print(req)
-    s = 'data: {}'.format(req.uuid)
-    print('Got call doing work... with {}'.format(s))
-    print(os.getcwd()+'/test.txt')
-    with open(os.getcwd()+'/test.txt', 'w+') as f:
+    s = 'cloud data: {}'.format(req.uuid)
+    print('Got call doing work on cloud side... with {}'.format(s))
+    print('/test.txt')
+    with open('/test.txt', 'w+') as f:
         f.write(s)
     rospy.loginfo(s)
     return UuidResponse()
