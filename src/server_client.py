@@ -11,7 +11,6 @@ from datetime import datetime
 import threading
 
 def server(req):
-    print(req)
     s = 'cloud data: {}'.format(req.uuid)
     print('Got call doing work on cloud side... with {}'.format(s))
     print('/test.txt')
